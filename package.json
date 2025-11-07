@@ -1,0 +1,25 @@
+{
+  "name": "mern-intern-app",
+  "version": "1.0.0",
+  "description": "MERN Stack Job Portal Application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "deploy": "./deploy.sh",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "keywords": ["mern", "react", "node", "mongodb", "job-portal"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
